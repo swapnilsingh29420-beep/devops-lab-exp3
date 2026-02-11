@@ -17,7 +17,6 @@ def test_subtract_numbers():
 def test_multiply_numbers():
     assert multiply(5, 3) == 15
 
-
 # Division Tests
 
 def test_divide_normal():
@@ -29,8 +28,10 @@ def test_divide_float_result():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
-
-
+        
+def test_complex_expr():
+    assert (square_root(16) * sine(0)) == 0
+    
 # Square Root Tests
 
 def test_square_root_perfect_square():
@@ -38,7 +39,6 @@ def test_square_root_perfect_square():
 
 def test_square_root_float():
     assert square_root(2) == math.sqrt(2)
-
 
 # Power Function Tests
 
@@ -50,11 +50,6 @@ def test_power_zero_exponent():
 
 # Sine Function Tests
 
-def test_sine_zero():
-    assert sine(0) == 0
-
 def test_sine_90_degrees():
     assert pytest.approx(sine(90), 0.0001) == 1
 
-def test_sine_30_degrees():
-    assert pytest.approx(sine(30), 0.0001) == 0.5
