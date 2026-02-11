@@ -1,6 +1,7 @@
 import pytest
 import math
-from calc import add, subtract, multiply, divide, square_root, power, sine
+from basic_calc import add, subtract, multiply, divide
+from advanced_calc square_root, power, sine
 
 # Basic operations test
 
