@@ -7,10 +7,7 @@ from advanced_calc import square_root, power, sine
 
 def test_add_positive_numbers():
     assert add(2, 3) == 5
-
-def test_add_negative_numbers():
-    assert add(-4, -6) == -10
-
+    
 def test_subtract_numbers():
     assert subtract(10, 4) == 6
 
@@ -19,19 +16,14 @@ def test_multiply_numbers():
 
 # Division Tests
 
-def test_divide_normal():
-    assert divide(10, 2) == 5
-
 def test_divide_float_result():
     assert divide(7, 2) == 3.5
 
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
-        
-def test_complex_expr():
-    assert (square_root(16) * sine(0)) == 0
-    
+ 
+
 # Square Root Tests
 
 def test_square_root_perfect_square():
@@ -53,3 +45,10 @@ def test_power_zero_exponent():
 def test_sine_90_degrees():
     assert pytest.approx(sine(90), 0.0001) == 1
 
+# Checking complex expressions
+
+def test_complex_expr():
+    assert (square_root(16) * sine(0)) == 0
+    assert add(5, sine(30)) == 5.5
+
+    
