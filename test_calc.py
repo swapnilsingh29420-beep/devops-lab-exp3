@@ -45,10 +45,11 @@ def test_power_zero_exponent():
 def test_sine_90_degrees():
     assert pytest.approx(sine(90), 0.0001) == 1
 
-# Checking complex expressions
+# Checking complex expressions for integration testing
 
 def test_complex_expr():
     assert (square_root(16) * sine(0)) == 0
     assert add(5, sine(30)) == 5.5
+    
 
     
